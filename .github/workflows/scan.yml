@@ -1,0 +1,22 @@
+name: Manually triggered scan
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.3.0
+        with:
+          target: 'https://www.nephrogo.com/'
+
