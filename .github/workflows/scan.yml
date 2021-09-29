@@ -11,4 +11,4 @@ jobs:
         with:
           docker_name: 'owasp/zap2docker-stable'
           token: ${{ secrets.GITHUB_TOKEN }}
-          target: 'https://www.nephrogo.com/'
+          target: 'https://alisain.lt/'
